@@ -14,26 +14,26 @@ public class MetodoBinario {
 
             for (int i = inicio; i <= fin; i++) {
                 System.out.print(listaPersonas[i].getEdad());
-                if (i < fin) System.out.print(" | ");
+                if (i < fin) System.out.print(" - ");
             }
             System.out.println();
 
-            System.out.print("inicio = " + inicio + ", fin = " + fin + ", medio = " + medio + ", edadCentral = " + edadCentral + "  ");
+            System.out.print("inicio = " + inicio + " fin = " + fin + " medio = " + medio + " edadCentral = " + edadCentral + "  ");
 
             if (edadCentral == edadObjetivo) {
-                System.out.println("--> ENCONTRADO");
+                System.out.println("--> Encontrado");
                 System.out.println("La persona con edad " + edadObjetivo + " es: " + listaPersonas[medio].getNombre());
                 return;
             } else if (edadCentral < edadObjetivo) {
-                System.out.println("--> BUSCAR A LA DERECHA");
+                System.out.println("--> Buscar a la derecha");
                 inicio = medio + 1;
             } else {
-                System.out.println("--> BUSCAR A LA IZQUIERDA");
+                System.out.println("--> Buscar a la izquierda");
                 fin = medio - 1;
             }
         }
 
-        System.out.println("No se encontró ninguna persona con la edad especificada.");
+        System.out.println("No se encontró ninguna persona con esa edad.");
     }
 }
 
